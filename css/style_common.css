@@ -1,0 +1,71 @@
+
+
+.row {
+   display: flex;
+   flex-wrap: wrap;
+   /* padding: 0 4px; */
+   justify-items: space-between;
+   position: relative;
+   
+ }
+ 
+ /* Create four equal columns that sits next to each other */
+ .column {
+   flex: 50%;
+   max-width: 25%;
+   padding: 0 4 25px;
+   margin:0 auto;
+ }
+ 
+
+
+.grid{
+   margin-top: 8px;
+   vertical-align: middle;
+   width: 100%;
+   margin-bottom: 25px;
+ }
+
+
+ .container {
+   position: sticky;
+   text-align: center;
+   color: white;
+   
+ }
+
+
+ .text-block {
+   position: absolute;
+   transform: translate(-50%, -50%);
+   color: white;
+   top: 50%;
+   left: 50%;
+ }
+
+
+ 
+ .text-block h2{position: relative; font-size: 15px;}
+
+
+ /* Responsive layout - makes a two column-layout instead of four columns */
+ @media screen and (max-width: 800px) {
+   .column {
+     flex: 50%;
+     max-width: 50%;
+   }
+
+   .text-block h2{position: relative; font-size: 5px;}
+ }
+ 
+
+
+ /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+ @media screen and (max-width: 600px) {
+   .column {
+     flex: 100%;
+     max-width: 100%;
+   }
+
+   .text-block h2{position: relative; font-size: 25px;}
+ }
